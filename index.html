@@ -539,7 +539,60 @@
     .service-card:hover .service-card__arrow {
       background: var(--graphite);
       color: var(--white);
-      transform: translateX(4px);
+    }
+    .service-card.expanded .service-card__arrow {
+      background: var(--graphite);
+      color: var(--white);
+      transform: rotate(90deg);
+    }
+    /* ─── Раскрывающаяся панель услуги ─── */
+    .service-card__details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s cubic-bezier(0.25,0.46,0.45,0.94), opacity 0.3s ease;
+      opacity: 0;
+    }
+    .service-card.expanded .service-card__details {
+      max-height: 500px;
+      opacity: 1;
+    }
+    .service-card__details-inner {
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .service-card__detail-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 5px;
+    }
+    .service-card__detail-text {
+      font-size: 13px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+    .service-card__book {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      border-radius: 980px;
+      background: var(--graphite);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+    .service-card__book:hover {
+      background: #3d3d3f;
+      transform: translateY(-1px);
     }
 
     /* ─── Полный прайс-лист (аккордеон) ─── */
@@ -1616,7 +1669,7 @@
 
       <div class="services__grid">
 
-        <a class="service-card reveal" href="#booking">
+        <div class="service-card reveal">
           <div class="service-card__icon">💬</div>
           <div class="service-card__name">Консультация</div>
           <div class="service-card__desc">Сбор анамнеза, назначение домашнего ухода, составление плана по лечению кожи и подбор препаратов.</div>
@@ -1624,9 +1677,22 @@
             <div class="service-card__price">1 500 ₽</div>
             <div class="service-card__arrow">→</div>
           </div>
-        </a>
+          <div class="service-card__details">
+            <div class="service-card__details-inner">
+              <div>
+                <div class="service-card__detail-label">Включает</div>
+                <div class="service-card__detail-text">Анализ типа и состояния кожи, сбор анамнеза, подбор препаратов и косметики для домашнего ухода, составление индивидуального плана процедур.</div>
+              </div>
+              <div>
+                <div class="service-card__detail-label">Результат</div>
+                <div class="service-card__detail-text">Чёткое понимание состояния вашей кожи, персональный план ухода и уверенность в правильном направлении.</div>
+              </div>
+              <a href="#booking" class="service-card__book">Записаться</a>
+            </div>
+          </div>
+        </div>
 
-        <a class="service-card reveal reveal-delay-1" href="#booking">
+        <div class="service-card reveal reveal-delay-1">
           <div class="service-card__icon">✨</div>
           <div class="service-card__name">Чистки лица</div>
           <div class="service-card__desc">Комбинированная чистка лица, в том числе с пилингом по типу кожи или BiorepeelCI3. Чистка кожи спины.</div>
@@ -1634,9 +1700,22 @@
             <div class="service-card__price">от 3 500 ₽</div>
             <div class="service-card__arrow">→</div>
           </div>
-        </a>
+          <div class="service-card__details">
+            <div class="service-card__details-inner">
+              <div>
+                <div class="service-card__detail-label">Включает</div>
+                <div class="service-card__detail-text">Очищение кожи, размягчение и раскрытие пор, механическое удаление комедонов и сальных пробок, антисептическая обработка, успокаивающая маска.</div>
+              </div>
+              <div>
+                <div class="service-card__detail-label">Результат</div>
+                <div class="service-card__detail-text">Чистые поры, ровный тон, гладкость и матовость кожи без раздражений и длительного восстановления.</div>
+              </div>
+              <a href="#booking" class="service-card__book">Записаться</a>
+            </div>
+          </div>
+        </div>
 
-        <a class="service-card reveal reveal-delay-2" href="#booking">
+        <div class="service-card reveal reveal-delay-2">
           <div class="service-card__icon">🧪</div>
           <div class="service-card__name">Пилинги</div>
           <div class="service-card__desc">Jessner, BiorepeelCI3, жёлтый, розовый, стоп-пигмент, монохлоруксусная кислота. Карбокситерапия.</div>
@@ -1644,9 +1723,22 @@
             <div class="service-card__price">от 2 000 ₽</div>
             <div class="service-card__arrow">→</div>
           </div>
-        </a>
+          <div class="service-card__details">
+            <div class="service-card__details-inner">
+              <div>
+                <div class="service-card__detail-label">Включает</div>
+                <div class="service-card__detail-text">Подготовку кожи, нанесение кислотного состава (подбирается индивидуально), нейтрализацию, восстанавливающий финишный уход.</div>
+              </div>
+              <div>
+                <div class="service-card__detail-label">Результат</div>
+                <div class="service-card__detail-text">Обновление и выравнивание кожи, устранение пигментации, сужение пор, Anti-Age эффект, здоровое сияние.</div>
+              </div>
+              <a href="#booking" class="service-card__book">Записаться</a>
+            </div>
+          </div>
+        </div>
 
-        <a class="service-card reveal reveal-delay-3" href="#booking">
+        <div class="service-card reveal reveal-delay-3">
           <div class="service-card__icon">💧</div>
           <div class="service-card__name">Мезотерапия</div>
           <div class="service-card__desc">Мезотерапия лица, зоны вокруг глаз, шеи и декольте, волосистой части головы.</div>
@@ -1654,9 +1746,22 @@
             <div class="service-card__price">от 3 000 ₽</div>
             <div class="service-card__arrow">→</div>
           </div>
-        </a>
+          <div class="service-card__details">
+            <div class="service-card__details-inner">
+              <div>
+                <div class="service-card__detail-label">Включает</div>
+                <div class="service-card__detail-text">Инъекционное введение коктейля из витаминов, гиалуроновой кислоты и аминокислот в средние слои кожи. При необходимости — сосудистый этап.</div>
+              </div>
+              <div>
+                <div class="service-card__detail-label">Результат</div>
+                <div class="service-card__detail-text">Глубокое увлажнение и питание кожи, улучшение тонуса и цвета лица, укрепление сосудистой стенки, сияние.</div>
+              </div>
+              <a href="#booking" class="service-card__book">Записаться</a>
+            </div>
+          </div>
+        </div>
 
-        <a class="service-card reveal reveal-delay-4" href="#booking">
+        <div class="service-card reveal reveal-delay-4">
           <div class="service-card__icon">💉</div>
           <div class="service-card__name">Биоревитализация</div>
           <div class="service-card__desc">Biogel, Novocutan, Neauvia, Plinest, Meso-Xantin, Meso-Wharton, Revi. Биоревитализация волос и зоны глаз.</div>
@@ -1664,9 +1769,22 @@
             <div class="service-card__price">от 4 500 ₽</div>
             <div class="service-card__arrow">→</div>
           </div>
-        </a>
+          <div class="service-card__details">
+            <div class="service-card__details-inner">
+              <div>
+                <div class="service-card__detail-label">Включает</div>
+                <div class="service-card__detail-text">Инъекционное введение гиалуроновой кислоты и биоактивных компонентов. Препарат подбирается индивидуально под задачу и тип кожи.</div>
+              </div>
+              <div>
+                <div class="service-card__detail-label">Результат</div>
+                <div class="service-card__detail-text">Глубокое увлажнение изнутри, восстановление упругости и эластичности, выраженный лифтинг-эффект, здоровое сияние кожи.</div>
+              </div>
+              <a href="#booking" class="service-card__book">Записаться</a>
+            </div>
+          </div>
+        </div>
 
-        <a class="service-card reveal reveal-delay-5" href="#booking">
+        <div class="service-card reveal reveal-delay-5">
           <div class="service-card__icon">⚡</div>
           <div class="service-card__name">Липолитики</div>
           <div class="service-card__desc">Коррекция лица и тела: Light fit, Mesopharm, Dr.lipo, Biogel «Стройность».</div>
@@ -1674,7 +1792,20 @@
             <div class="service-card__price">от 2 500 ₽</div>
             <div class="service-card__arrow">→</div>
           </div>
-        </a>
+          <div class="service-card__details">
+            <div class="service-card__details-inner">
+              <div>
+                <div class="service-card__detail-label">Включает</div>
+                <div class="service-card__detail-text">Инъекции препаратов, расщепляющих локальные жировые отложения, в проблемные зоны лица и тела. Схема и дозировка подбираются индивидуально.</div>
+              </div>
+              <div>
+                <div class="service-card__detail-label">Результат</div>
+                <div class="service-card__detail-text">Коррекция контуров лица (щёки, второй подбородок) и тела, уменьшение объёмов, улучшение рельефа без хирургического вмешательства.</div>
+              </div>
+              <a href="#booking" class="service-card__book">Записаться</a>
+            </div>
+          </div>
+        </div>
 
       </div>
 
@@ -2520,7 +2651,7 @@
       </div>
 
       <div class="footer__bottom">
-        <div class="footer__copy">© 2024 Кристина Гордеева · Косметолог. Все права защищены.</div>
+        <div class="footer__copy">© 2026 Кристина Гордеева · Косметолог. Все права защищены.</div>
         <span class="footer__policy" id="openPolicyFooter" style="cursor:pointer;">Политика конфиденциальности</span>
       </div>
     </div>
@@ -2787,6 +2918,20 @@
         document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
         // Открываем текущий, если он был закрыт
         if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    /* ─── Раскрытие карточек услуг по клику на стрелку ─── */
+    document.querySelectorAll('.service-card').forEach(card => {
+      const arrow = card.querySelector('.service-card__arrow');
+      if (!arrow) return;
+      arrow.style.cursor = 'pointer';
+      arrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = card.classList.contains('expanded');
+        // Закрываем все остальные
+        document.querySelectorAll('.service-card.expanded').forEach(c => c.classList.remove('expanded'));
+        if (!isOpen) card.classList.add('expanded');
       });
     });
 

@@ -2384,137 +2384,34 @@
 
 
   <!-- ============================================================
-       9. ФОРМА ЗАПИСИ
+       9. ЗАПИСЬ
   ============================================================ -->
-  <section class="section section--milk" id="booking">
+  <section class="section" id="booking">
     <div class="container">
-      <div class="booking__inner">
+      <div style="text-align:center; max-width:560px; margin:0 auto;">
 
-        <!-- Информация -->
-        <div class="booking__info">
-          <div class="label reveal">Запись</div>
-          <h2 class="h2 reveal reveal-delay-1">Запишитесь<br>на процедуру</h2>
-          <p class="booking__subtitle reveal reveal-delay-2">
-            Оставьте заявку — я свяжусь с вами в течение часа
-            и согласую удобное время.
-          </p>
+        <div class="label reveal">Запись</div>
+        <h2 class="h2 reveal reveal-delay-1" style="margin-bottom:20px;">Запишитесь<br>на процедуру</h2>
+        <p class="reveal reveal-delay-2" style="font-size:17px; color:var(--mid); line-height:1.7; margin-bottom:48px;">
+          Напишите мне в Telegram — я отвечу в течение часа,
+          расскажу подробнее и согласую удобное время.
+        </p>
 
-          <div class="booking__contacts reveal reveal-delay-3">
-            <div class="booking__contact">
-              <div class="booking__contact-icon">📱</div>
-              <span>+7 (977) 674-32-56</span>
-            </div>
-            <div class="booking__contact">
-              <div class="booking__contact-icon">✈️</div>
-              <span>@kristina13131</span>
-            </div>
-            <div class="booking__contact">
-              <div class="booking__contact-icon">📍</div>
-              <span>г. Москва, 11-я Парковая ул., 49, стр. 3, 3 этаж, каб. 14</span>
-            </div>
+        <a href="https://t.me/kristina13131?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D0%B4%D1%83%D1%80%D1%8B"
+           target="_blank"
+           class="btn btn--primary reveal reveal-delay-3"
+           style="font-size:17px; padding:20px 48px; display:inline-flex; gap:10px;">
+          ✈️ Записаться через Telegram
+        </a>
+
+        <div class="reveal reveal-delay-4" style="margin-top:48px; display:flex; flex-direction:column; gap:14px; align-items:center;">
+          <div style="display:flex; align-items:center; gap:10px; font-size:15px; color:var(--mid);">
+            <span style="font-size:18px;">📱</span>
+            <a href="tel:+79776743256" style="color:var(--mid);">+7 (977) 674-32-56</a>
           </div>
-        </div>
-
-        <!-- Форма -->
-        <div class="reveal reveal-delay-2">
-          <div class="booking-form" id="bookingForm">
-
-            <!-- Содержимое формы -->
-            <div id="formContent">
-              <form id="appointmentForm" novalidate>
-
-                <div class="form-group">
-                  <label class="form-label" for="fieldName">Ваше имя</label>
-                  <input class="form-input" id="fieldName" type="text" placeholder="Анна" required autocomplete="given-name" />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="fieldPhone">Телефон</label>
-                  <input class="form-input" id="fieldPhone" type="tel" placeholder="+7 (___) ___-__-__" required autocomplete="tel" />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="fieldService">Процедура</label>
-                  <div class="form-select-wrap">
-                    <select class="form-select" id="fieldService">
-                      <option value="">Выберите процедуру</option>
-                      <optgroup label="Консультация">
-                        <option>Консультация косметолога — 1 500 ₽</option>
-                      </optgroup>
-                      <optgroup label="Чистки лица">
-                        <option>Комбинированная чистка лица — 3 500 ₽</option>
-                        <option>Комбинированная чистка + пилинг по типу кожи — 4 000 ₽</option>
-                        <option>Комбинированная чистка + BiorepeelCI3 — 5 000 ₽</option>
-                        <option>Чистка кожи на спине — 6 000 ₽</option>
-                      </optgroup>
-                      <optgroup label="Пилинги">
-                        <option>Поверхностный пилинг — 2 000 ₽</option>
-                        <option>Розовый пилинг — 2 500 ₽</option>
-                        <option>Пилинг Jessner — 3 000 ₽</option>
-                        <option>Пилинг «Стоп-пигмент» Anti Age — 3 000 ₽</option>
-                        <option>Пилинг с монохлоруксусной кислотой — 3 000 ₽</option>
-                        <option>Пилинг BiorepeelCI3 — 3 500 ₽</option>
-                        <option>Жёлтый пилинг — 4 000 ₽</option>
-                        <option>Жёлтый пилинг + Jessner — 5 500 ₽</option>
-                        <option>Карбокситерапия — 2 500 ₽</option>
-                      </optgroup>
-                      <optgroup label="Мезотерапия">
-                        <option>Мезотерапия вокруг глаз — 3 000 ₽</option>
-                        <option>Мезотерапия волосистой части головы — 3 500 ₽</option>
-                        <option>Мезотерапия лица — 4 000 ₽</option>
-                        <option>Мезотерапия лица и шеи декольте — 5 000 ₽</option>
-                      </optgroup>
-                      <optgroup label="Биоревитализация">
-                        <option>Биоревитализация глаз — 4 500 ₽</option>
-                        <option>Биоревитализация волос — 4 500 ₽</option>
-                        <option>Biogel — 7 000 ₽</option>
-                        <option>Neauvia — 11 000 ₽</option>
-                        <option>Revi — от 11 000 ₽</option>
-                        <option>Novocutan — 12 000 ₽</option>
-                        <option>Meso-Xantin — 13 500 ₽</option>
-                        <option>Meso-Wharton — 13 500 ₽</option>
-                        <option>Plinest — 14 000 ₽</option>
-                      </optgroup>
-                      <optgroup label="Липолитики">
-                        <option>Light fit (лицо) — от 3 500 ₽</option>
-                        <option>Mesopharm (лицо) — 3 000 ₽</option>
-                        <option>Dr.lipo (лицо) — 2 500 ₽</option>
-                        <option>Dr.lipo (тело) — от 2 500 ₽</option>
-                        <option>Biogel «Стройность» — 12 000 ₽</option>
-                      </optgroup>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="fieldComment">Комментарий</label>
-                  <textarea class="form-textarea" id="fieldComment" placeholder="Расскажите о своём запросе..."></textarea>
-                </div>
-
-                <!-- Чекбокс согласия на обработку персональных данных -->
-                <div class="form-consent">
-                  <input type="checkbox" class="form-consent__checkbox" id="fieldConsent" required />
-                  <label class="form-consent__label" for="fieldConsent">
-                    Я даю согласие на обработку моих персональных данных в соответствии с
-                    <span class="form-consent__link" id="openPolicy">Политикой конфиденциальности</span>
-                  </label>
-                </div>
-
-                <button type="submit" class="form-submit">Записаться</button>
-
-              </form>
-            </div>
-
-            <!-- Экран успеха -->
-            <div class="form-success" id="formSuccess">
-              <div class="form-success__icon">✓</div>
-              <div class="form-success__title">Заявка отправлена!</div>
-              <div class="form-success__text">
-                Откроется Telegram для подтверждения записи.<br>
-                Я свяжусь с вами в ближайшее время.
-              </div>
-            </div>
-
+          <div style="display:flex; align-items:center; gap:10px; font-size:15px; color:var(--mid);">
+            <span style="font-size:18px;">📍</span>
+            <span>г. Москва, 11-я Парковая ул., 49, стр. 3, 3 этаж, каб. 14</span>
           </div>
         </div>
 
@@ -2784,59 +2681,7 @@
       });
     });
 
-    /* ─── Телефонная маска ─── */
-    const phoneInput = document.getElementById('fieldPhone');
-    if (phoneInput) {
-      phoneInput.addEventListener('input', function () {
-        let v = this.value.replace(/\D/g, '');
-        if (v.startsWith('8')) v = '7' + v.slice(1);
-        if (!v.startsWith('7') && v.length > 0) v = '7' + v;
-        v = v.slice(0, 11);
-        let out = '';
-        if (v.length > 0) out += '+7';
-        if (v.length > 1) out += ' (' + v.slice(1, 4);
-        if (v.length > 4) out += ') ' + v.slice(4, 7);
-        if (v.length > 7) out += '-' + v.slice(7, 9);
-        if (v.length > 9) out += '-' + v.slice(9, 11);
-        this.value = out;
-      });
-    }
-
-    /* ─── Форма записи → Telegram ─── */
-    const form = document.getElementById('appointmentForm');
-    if (form) {
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const name     = document.getElementById('fieldName').value.trim();
-        const phone    = document.getElementById('fieldPhone').value.trim();
-        const service  = document.getElementById('fieldService').value || 'Не указана';
-        const comment  = document.getElementById('fieldComment').value.trim() || 'Без комментариев';
-
-        // Базовая валидация
-        if (!name) { alert('Пожалуйста, введите ваше имя'); return; }
-        if (!phone || phone.length < 16) { alert('Пожалуйста, введите корректный номер телефона'); return; }
-
-        // Формируем сообщение
-        const msg = encodeURIComponent(
-          `Здравствуйте, хочу записаться на процедуру.\n\n` +
-          `Имя: ${name}\n` +
-          `Телефон: ${phone}\n` +
-          `Процедура: ${service}\n` +
-          `Комментарий: ${comment}`
-        );
-
-        const tgUsername = 'kristina13131';
-        const tgUrl = `https://t.me/${tgUsername}?text=${msg}`;
-
-        // Показываем экран успеха
-        document.getElementById('formContent').style.display = 'none';
-        document.getElementById('formSuccess').classList.add('show');
-
-        // Открываем Telegram
-        setTimeout(() => { window.open(tgUrl, '_blank'); }, 400);
-      });
-    }
+    /* форма удалена — запись через Telegram-кнопку */
 
     /* ─── Карусель отзывов ─── */
     (function () {
@@ -2958,67 +2803,26 @@
       <div class="modal__body">
 
         <h2>1. Общие положения</h2>
-        <p>Настоящая Политика конфиденциальности определяет порядок обработки и защиты персональных данных пользователей сайта.</p>
-        <p>Оператор персональных данных обязуется соблюдать права и свободы человека и гражданина при обработке персональных данных, включая защиту прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
-        <p>Настоящая Политика разработана в соответствии с требованиями законодательства Российской Федерации о персональных данных.</p>
-        <p>Использование сайта означает согласие пользователя с настоящей Политикой и условиями обработки его персональных данных.</p>
+        <p>Настоящий сайт является информационным ресурсом и предназначен для ознакомления с услугами косметолога Кристины Гордеевой.</p>
+        <p>Сайт не содержит форм сбора персональных данных и не осуществляет их автоматизированную обработку или хранение.</p>
 
-        <h2>2. Оператор персональных данных</h2>
-        <p>Оператор персональных данных: Гордеева Кристина<br>
-        Электронная почта для обращений: kristina13131 (Telegram)</p>
+        <h2>2. Отсутствие сбора персональных данных</h2>
+        <p>Данный сайт <strong>не собирает, не хранит и не обрабатывает</strong> персональные данные пользователей. На сайте отсутствуют регистрация, личный кабинет, формы обратной связи и любые иные инструменты сбора данных.</p>
 
-        <h2>3. Персональные данные, которые обрабатываются</h2>
-        <p>Оператор может обрабатывать следующие персональные данные пользователя:</p>
-        <ul>
-          <li>имя</li>
-          <li>номер телефона</li>
-          <li>никнейм или контакт в мессенджерах (Telegram)</li>
-        </ul>
-        <p>Также автоматически могут собираться:</p>
-        <ul>
-          <li>IP-адрес</li>
-          <li>данные cookie</li>
-          <li>данные браузера</li>
-          <li>информация о действиях пользователя на сайте</li>
-        </ul>
+        <h2>3. Порядок связи</h2>
+        <p>Вся коммуникация между пользователем и специалистом осуществляется через мессенджер Telegram (<a href="https://t.me/kristina13131" style="color:var(--graphite);">@kristina13131</a>).</p>
+        <p>Пользователь самостоятельно и добровольно передаёт свои данные (имя, номер телефона и иную информацию) напрямую через интерфейс Telegram. Обработка этих данных регулируется <a href="https://telegram.org/privacy" target="_blank" style="color:var(--graphite);">политикой конфиденциальности Telegram</a>, а не настоящим сайтом.</p>
 
-        <h2>4. Цели обработки персональных данных</h2>
-        <ul>
-          <li>обработка заявок пользователя</li>
-          <li>запись на услуги</li>
-          <li>обратная связь с пользователем</li>
-          <li>информирование о предоставляемых услугах</li>
-          <li>улучшение работы сайта</li>
-        </ul>
+        <h2>4. Файлы cookie</h2>
+        <p>Сайт может использовать технические cookie-файлы, необходимые для корректной работы страницы. Аналитические и рекламные cookie не используются. Пользователь может отключить cookie в настройках своего браузера.</p>
 
-        <h2>5. Правовые основания обработки данных</h2>
-        <p>Оператор обрабатывает персональные данные пользователя на основании:</p>
-        <ul>
-          <li>добровольного согласия пользователя</li>
-          <li>необходимости исполнения договора или заявки пользователя</li>
-          <li>требований законодательства Российской Федерации</li>
-        </ul>
+        <h2>5. Ссылки на внешние ресурсы</h2>
+        <p>Сайт содержит ссылки на внешние ресурсы (Telegram, Instagram). Владелец сайта не несёт ответственности за политику конфиденциальности и содержание этих ресурсов.</p>
 
-        <h2>6. Порядок обработки персональных данных</h2>
-        <p>Обработка персональных данных осуществляется следующими способами: сбор, запись, систематизация, хранение, уточнение, использование, удаление. Персональные данные обрабатываются как с использованием средств автоматизации, так и без их использования.</p>
+        <h2>6. Изменение политики</h2>
+        <p>Владелец сайта вправе вносить изменения в настоящую Политику. Актуальная версия всегда размещена на данной странице.</p>
 
-        <h2>7. Передача персональных данных третьим лицам</h2>
-        <p>Персональные данные пользователей могут передаваться третьим лицам только если это необходимо для выполнения заявки пользователя, если этого требует законодательство, или если пользователь дал согласие. Оператор не продаёт персональные данные третьим лицам.</p>
-
-        <h2>8. Использование файлов cookie</h2>
-        <p>Сайт может использовать файлы cookie для улучшения пользовательского опыта и анализа посещаемости. Пользователь может отключить cookies в настройках своего браузера.</p>
-
-        <h2>9. Права пользователя</h2>
-        <p>Пользователь имеет право получать информацию о своих персональных данных, требовать их уточнения или удаления, а также отозвать согласие на обработку. Для реализации прав направьте запрос через Telegram: @kristina13131.</p>
-
-        <h2>10. Защита персональных данных</h2>
-        <p>Оператор принимает необходимые организационные и технические меры для защиты персональных данных пользователей от неправомерного доступа, уничтожения, изменения, блокирования, копирования и распространения.</p>
-
-        <h2>11. Срок хранения персональных данных</h2>
-        <p>Персональные данные хранятся не дольше, чем это требуется для целей обработки, либо до момента отзыва согласия пользователем.</p>
-
-        <h2>12. Изменение политики конфиденциальности</h2>
-        <p>Оператор имеет право вносить изменения в настоящую Политику. Новая редакция вступает в силу с момента её размещения на сайте.</p>
+        <p style="margin-top:24px; padding-top:16px; border-top:1px solid var(--border); font-size:13px; color:var(--light);">Последнее обновление: март 2026 г.</p>
 
       </div>
     </div>
@@ -3040,15 +2844,7 @@
     policyModal.addEventListener('click', e => { if (e.target === policyModal) closeModal(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-    /* ─── Валидация чекбокса в форме ─── */
-    const consentCheck = document.getElementById('fieldConsent');
-    const formSubmitBtn = document.querySelector('.form-submit');
-    if (consentCheck && formSubmitBtn) {
-      consentCheck.addEventListener('change', () => {
-        formSubmitBtn.style.opacity = consentCheck.checked ? '1' : '0.5';
-      });
-      formSubmitBtn.style.opacity = '0.5';
-    }
+    /* чекбокс удалён вместе с формой */
   </script>
 
 </body>

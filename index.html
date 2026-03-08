@@ -1276,7 +1276,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
-      align-items: start;
+      align-items: center;
     }
     .contacts__info { }
     .contacts__list {
@@ -2477,16 +2477,16 @@
           </div>
         </div>
 
-        <!-- Карта-заглушка -->
-        <div class="reveal reveal-delay-2">
-          <div class="map-placeholder">
-            <div class="map-placeholder__pin"></div>
-            <div class="map-placeholder__icon" style="opacity:0;height:0;overflow:hidden"></div>
-            <div style="position:absolute; bottom:24px; left:24px; right:24px; background:white; border-radius:12px; padding:16px; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
-              <div style="font-size:13px; font-weight:600; color:var(--graphite); margin-bottom:4px;">Кабинет Кристины Гордеевой</div>
-              <div style="font-size:12px; color:var(--mid);">11-я Парковая ул., 49, стр. 3 · 3 этаж, каб. 14</div>
-            </div>
-          </div>
+        <!-- Яндекс Карта -->
+        <div class="reveal reveal-delay-2" style="border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-md);">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=37.804152%2C55.805184&z=16&pt=37.804152%2C55.805184%2Cpm2rdm&text=11-%D1%8F%20%D0%9F%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%2049%2C%20%D1%81%D1%82%D1%80.%203"
+            width="100%"
+            height="400"
+            frameborder="0"
+            allowfullscreen="true"
+            style="display:block;"
+          ></iframe>
         </div>
 
       </div>

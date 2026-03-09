@@ -685,6 +685,10 @@
       background: var(--white);
       border: 1px solid var(--border);
       transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .benefit-item:hover {
       background: var(--graphite);
@@ -1479,6 +1483,8 @@
       .section { padding: 64px 0; }
       .services__grid { grid-template-columns: 1fr; }
       .benefits__grid { grid-template-columns: repeat(2, 1fr); }
+      .benefits__grid .benefit-item { min-height: 140px; }
+      .benefit-item--wide { grid-column: span 2; }
       .steps__grid { grid-template-columns: 1fr; }
       .hero__stats { gap: 28px; }
       .footer__inner { grid-template-columns: 1fr; gap: 32px; }
@@ -2094,7 +2100,7 @@
           <span class="benefit-item__icon">🛡</span>
           <div class="benefit-item__title">Стерильность и безопасность</div>
         </div>
-        <div class="benefit-item reveal reveal-delay-4">
+        <div class="benefit-item benefit-item--wide reveal reveal-delay-4">
           <span class="benefit-item__icon">⚡</span>
           <div class="benefit-item__title">Современные технологии</div>
         </div>

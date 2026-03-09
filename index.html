@@ -626,14 +626,16 @@
       gap: 12px;
     }
     .accordion-trigger:hover { background: var(--milk); }
-    .accordion-trigger__left { display: flex; align-items: center; gap: 14px; }
-    .accordion-trigger__icon { font-size: 18px; flex-shrink: 0; }
-    .accordion-trigger__name { font-size: 16px; font-weight: 600; color: var(--graphite); }
+    .accordion-trigger__left { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
+    .accordion-trigger__icon { font-size: 14px; flex-shrink: 0; }
+    .accordion-trigger__name { font-size: 15px; font-weight: 600; color: var(--graphite); }
     .accordion-trigger__from {
       font-size: 14px;
       color: var(--mid);
-      margin-left: auto;
       white-space: nowrap;
+      flex-shrink: 0;
+      min-width: 90px;
+      text-align: right;
       padding-right: 16px;
     }
     .accordion-trigger__chevron {

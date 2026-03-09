@@ -1482,9 +1482,9 @@
     @media (max-width: 640px) {
       .section { padding: 64px 0; }
       .services__grid { grid-template-columns: 1fr; }
-      .benefits__grid { grid-template-columns: repeat(2, 1fr); }
-      .benefits__grid .benefit-item { min-height: 140px; }
-      .benefit-item--wide { grid-column: span 2; }
+      .benefits__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr; }
+      .benefits__grid .benefit-item { aspect-ratio: 1 / 1; min-height: unset; }
+      .benefit-item--wide { grid-column: span 2; aspect-ratio: 2 / 1; }
       .steps__grid { grid-template-columns: 1fr; }
       .hero__stats { gap: 28px; }
       .footer__inner { grid-template-columns: 1fr; gap: 32px; }
